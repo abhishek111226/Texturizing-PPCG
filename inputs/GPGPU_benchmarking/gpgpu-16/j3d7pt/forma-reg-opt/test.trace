@@ -1,0 +1,11 @@
+==31881== NVPROF is profiling process 31881, command: ./test
+==31881== Profiling application: ./test
+==31881== Profiling result:
+"Start","Duration","Grid X","Grid Y","Grid Z","Block X","Block Y","Block Z","Registers Per Thread","Static SMem","Dynamic SMem","Size","Throughput","Device","Context","Stream","Name"
+ms,ms,,,,,,,,B,KB,MB,GB/s,,,,
+202.029698,81.703651,,,,,,,,,,536.870912,6.570954,"Tesla K20c (0)","1","7","[CUDA memcpy HtoD]"
+286.027777,11.479307,10,10,1,32,32,1,27,1.638400e+04,0.000000,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__0__(float*, int, int, int, float*, float*, float*, float*, float*, float*, int, int, int, float*) [125]"
+297.510572,12.600954,10,10,1,32,32,1,32,1.638400e+04,0.000000,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__1__(float*, int, int, int, float*, float*, float*, float*, float*, float*, int, int, int, float*) [142]"
+310.114662,9.544724,10,10,1,32,32,1,32,1.638400e+04,0.000000,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__2__(float*, int, int, int, float*, float*, float*, float*, float*, float*, int, int, int, float*) [159]"
+319.662682,15.090968,10,10,1,32,32,1,30,1.638400e+04,0.000000,,,"Tesla K20c (0)","1","7","__kernel___forma_kernel__3__(float*, int, int, int, float*, float*, float*, float*, float*, float*, int, int, int, float*) [176]"
+334.756434,81.436927,,,,,,,,,,536.870912,6.592475,"Tesla K20c (0)","1","7","[CUDA memcpy DtoH]"

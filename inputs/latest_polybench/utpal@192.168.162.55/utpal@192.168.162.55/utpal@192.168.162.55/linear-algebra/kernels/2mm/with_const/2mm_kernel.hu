@@ -1,0 +1,16 @@
+#include "cuda.h"
+
+
+__global__ void kernel0(float A[800][1100], float alpha, float tmp[800][900]);
+
+__global__ void kernel1(float D[800][1200], float beta, float tmp[800][900]);
+
+#ifdef HOSTCODE 
+ 	 texture< float, 2, cudaReadModeElementType > texRef_B;
+	 texture< float, 2, cudaReadModeElementType > texRef_C;
+
+#elif DEVICECODE 
+	 extern texture< float, 2, cudaReadModeElementType > texRef_B;
+	 extern texture< float, 2, cudaReadModeElementType > texRef_C;
+
+ #endif 

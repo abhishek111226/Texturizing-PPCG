@@ -1,0 +1,28 @@
+struct float4;
+stencil curl1(vector#3 float4 A, float dx, float dy, float dz) {
+  x = dz*(A@[1,0,0].y - A.y) - dy*(A@[0,1,0].z - A.z);
+  y = dz*(A@[1,0,0].x - A.x) - dx*(A@[0,0,1].z - A.z);
+  z = dy*(A@[0,1,0].x - A.x) - dx*(A@[0,0,1].y - A.y);
+  return struct float4(x,y,z,0.0f);
+}
+stencil curl2(vector#3 float4 A, float dx, float dy, float dz) {
+  x = dz*(A.y - A@[-1,0,0].y) - dy*(A.z - A@[0,-1,0].z);
+  y = dz*(A.x - A@[-1,0,0].x) - dx*(A.z - A@[0,0,-1].z);
+  z = dy*(A.x - A@[0,-1,0].x) - dx*(A.y - A@[0,0,-1].y);
+  return struct float4(x,y,z,0.0f);	
+}
+stencil sum(vector#3 float4 A, vector#3 float4 B) {
+  x = A.x + B.x;
+  y = A.y + B.y;
+  z = A.z + B.z;
+  return struct float4(x,y,z,0.0f);
+}
+parameter L,M,N;
+vector#3 float4 input[L,M,N];
+float dx;
+float dy;
+float dz;
+temp1 = curl1(input, dx, dy, dz);
+temp2 = sum(temp1, input);
+temp3 = curl2(temp2, dx, dy, dz);
+return sum(temp3, temp2);

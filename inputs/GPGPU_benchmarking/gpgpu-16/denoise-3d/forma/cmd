@@ -1,0 +1,7 @@
+nvcc -ccbin=g++ -std=c++11 -Xcompiler "-fPIC -fopenmp -O3 -fno-strict-aliasing" -gencode arch=compute_35,code=sm_35 -Xptxas "-v -dlcm=cg" -maxrregcount=32 ~/cuda_header.cu ../file_gold.cpp file.driver.cpp file.cu -o test
+
+
+1. untiled - Forma untiled
+2. overtiled - Forma overtile
+
+3. My untiled (test-*-spatial  

@@ -1,0 +1,39 @@
+Requirements:
+
+- automake, autoconf, libtool
+	(not needed when compiling a release)
+- pkg-config (http://www.freedesktop.org/wiki/Software/pkg-config)
+	(not needed when compiling a release using the included isl and pet)
+- gmp (http://gmplib.org/)
+- libyaml (http://pyyaml.org/wiki/LibYAML)
+	(only needed if you want to compile the pet executable)
+- LLVM/clang libraries, 2.9 or higher (http://clang.llvm.org/get_started.html)
+	Unless you have some other reasons for wanting to use the svn version,
+	it is best to install the latest release (3.8).
+	For more details, see pet/README.
+
+If you are installing on Ubuntu, then you can install the following packages:
+
+Citing
+
+If you use PPCG for your research, you are invited to cite
+the following paper.
+
+@article{Verdoolaege2013PPCG,
+    author = {Verdoolaege, Sven and Juega, Juan Carlos and Cohen, Albert and
+		G\'{o}mez, Jos{\'e} Ignacio and Tenllado, Christian and
+		Catthoor, Francky},
+    title = {Polyhedral parallel code generation for CUDA},
+    journal = {ACM Trans. Archit. Code Optim.},
+    issue_date = {January 2013},
+    volume = {9},
+    number = {4},
+    month = jan,
+    year = {2013},
+    issn = {1544-3566},
+    pages = {54:1--54:23},
+    doi = {10.1145/2400682.2400713},
+    acmid = {2400713},
+    publisher = {ACM},
+    address = {New York, NY, USA},
+}

@@ -1,0 +1,29 @@
+==24994== NVPROF is profiling process 24994, command: ./test
+==24994== Profiling application: ./test
+==24994== Profiling result:
+"Time(%)","Time","Calls","Avg","Min","Max","Name"
+%,ms,,ms,ms,ms,
+29.202521,81.674989,1,81.674989,81.674989,81.674989,"[CUDA memcpy HtoD]"
+29.170290,81.584844,1,81.584844,81.584844,81.584844,"[CUDA memcpy DtoH]"
+16.708507,46.731140,1,46.731140,46.731140,46.731140,"__kernel___forma_kernel__1__(float*, int, int, int, float*, float*, float*, float*, float*, int, int, int, float*)"
+10.709136,29.951816,1,29.951816,29.951816,29.951816,"__kernel___forma_kernel__2__(float*, int, int, int, float*, float*, float*, float*, float*, int, int, int, float*)"
+8.757164,24.492449,1,24.492449,24.492449,24.492449,"__kernel___forma_kernel__3__(float*, int, int, int, float*, float*, float*, float*, float*, int, int, int, float*)"
+5.452382,15.249480,1,15.249480,15.249480,15.249480,"__kernel___forma_kernel__0__(float*, int, int, int, float*, float*, float*, float*, float*, int, int, int, float*)"
+
+==24994== API calls:
+"Time(%)","Time","Calls","Avg","Min","Max","Name"
+%,ms,,ms,ms,ms,
+72.775321,279.787531,2,139.893765,81.688260,198.099271,"cudaMemcpy"
+26.946726,103.597727,7,14.799675,0.332335,101.484694,"cudaMalloc"
+0.172943,0.664887,5,0.132977,0.126131,0.151999,"cudaFree"
+0.062832,0.241559,83,2.910000e-03,1.950000e-04,0.101992,"cuDeviceGetAttribute"
+0.016333,0.062794,4,0.015698,7.015000e-03,0.039831,"cudaLaunch"
+0.008337,0.032051,1,0.032051,0.032051,0.032051,"cuDeviceTotalMem"
+0.006737,0.025899,1,0.025899,0.025899,0.025899,"cuDeviceGetName"
+0.004667,0.017941,52,3.450000e-04,1.880000e-04,6.956000e-03,"cudaSetupArgument"
+0.002588,9.949000e-03,2,4.974000e-03,3.173000e-03,6.776000e-03,"cudaPointerGetAttributes"
+0.001225,4.709000e-03,13,3.620000e-04,2.060000e-04,8.320000e-04,"cudaGetLastError"
+0.001056,4.059000e-03,1,4.059000e-03,4.059000e-03,4.059000e-03,"cudaDeviceGetAttribute"
+0.000576,2.216000e-03,2,1.108000e-03,3.650000e-04,1.851000e-03,"cuDeviceGetCount"
+0.000497,1.909000e-03,4,4.770000e-04,2.620000e-04,1.097000e-03,"cudaConfigureCall"
+0.000164,6.290000e-04,2,3.140000e-04,2.140000e-04,4.150000e-04,"cuDeviceGet"

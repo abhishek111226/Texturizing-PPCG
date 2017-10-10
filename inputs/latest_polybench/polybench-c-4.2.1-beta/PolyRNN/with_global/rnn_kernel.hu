@@ -1,0 +1,14 @@
+#include "cuda.h"
+
+
+__global__ void kernel0(float U[2000][1000], float inp_F[1000][1000], float s_F[1000][2000]);
+
+__global__ void kernel1(float W[2000][2000], float s_F[1000][2000], int c0);
+
+__global__ void kernel2(float V[1500][2000], float out_F[1000][1500], float s_F[1000][2000]);
+
+#ifdef HOSTCODE 
+ 
+#elif DEVICECODE 
+
+ #endif 

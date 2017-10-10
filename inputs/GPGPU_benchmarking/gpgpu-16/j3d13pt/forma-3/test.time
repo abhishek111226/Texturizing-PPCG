@@ -1,0 +1,29 @@
+==27326== NVPROF is profiling process 27326, command: ./test
+==27326== Profiling application: ./test
+==27326== Profiling result:
+"Time(%)","Time","Calls","Avg","Min","Max","Name"
+%,ms,,ms,ms,ms,
+34.557001,258.102087,3,86.034029,85.989591,86.066840,"[CUDA memcpy HtoD]"
+34.520626,257.830404,3,85.943468,85.916182,85.985527,"[CUDA memcpy DtoH]"
+10.543975,78.751679,3,26.250559,26.180415,26.298496,"__kernel___forma_kernel__1__(float*, int, int, int, float*, float*, float*, int, int, int, float*)"
+8.130093,60.722690,3,20.240896,20.178805,20.278134,"__kernel___forma_kernel__3__(float*, int, int, int, float*, float*, float*, int, int, int, float*)"
+7.636494,57.036055,3,19.012018,19.003080,19.025127,"__kernel___forma_kernel__2__(float*, int, int, int, float*, float*, float*, int, int, int, float*)"
+4.611811,34.445060,3,11.481686,11.475468,11.486860,"__kernel___forma_kernel__0__(float*, int, int, int, float*, float*, float*, int, int, int, float*)"
+
+==27326== API calls:
+"Time(%)","Time","Calls","Avg","Min","Max","Name"
+%,ms,,ms,ms,ms,
+87.236809,747.109093,6,124.518182,85.963561,163.118606,"cudaMemcpy"
+12.452145,106.642038,15,7.109469,0.329374,101.457035,"cudaMalloc"
+0.245381,2.101476,15,0.140098,0.128863,0.159206,"cudaFree"
+0.029015,0.248492,83,2.993000e-03,1.940000e-04,0.107761,"cuDeviceGetAttribute"
+0.020001,0.171291,12,0.014274,6.804000e-03,0.039466,"cudaLaunch"
+0.004492,0.038470,132,2.910000e-04,1.850000e-04,7.313000e-03,"cudaSetupArgument"
+0.003747,0.032086,1,0.032086,0.032086,0.032086,"cuDeviceTotalMem"
+0.002935,0.025132,1,0.025132,0.025132,0.025132,"cuDeviceGetName"
+0.002521,0.021594,6,3.599000e-03,1.928000e-03,6.565000e-03,"cudaPointerGetAttributes"
+0.001325,0.011347,33,3.430000e-04,2.110000e-04,8.620000e-04,"cudaGetLastError"
+0.000814,6.973000e-03,3,2.324000e-03,1.855000e-03,2.846000e-03,"cudaDeviceGetAttribute"
+0.000515,4.407000e-03,12,3.670000e-04,2.390000e-04,8.750000e-04,"cudaConfigureCall"
+0.000224,1.919000e-03,2,9.590000e-04,3.260000e-04,1.593000e-03,"cuDeviceGetCount"
+0.000077,6.570000e-04,2,3.280000e-04,2.170000e-04,4.400000e-04,"cuDeviceGet"

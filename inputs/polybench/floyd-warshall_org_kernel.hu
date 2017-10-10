@@ -1,0 +1,10 @@
+#include "cuda.h"
+
+
+__global__ void kernel0(int *path, int n, int c0, int c1);
+
+#ifdef HOSTCODE 
+ 
+#elif DEVICECODE 
+
+ #endif 

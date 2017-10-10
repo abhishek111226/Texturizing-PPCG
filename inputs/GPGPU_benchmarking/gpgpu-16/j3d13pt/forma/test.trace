@@ -1,0 +1,14 @@
+==21198== NVPROF is profiling process 21198, command: ./test
+==21198== Profiling application: ./test
+==21198== Profiling result:
+"Start","Duration","Grid X","Grid Y","Grid Z","Block X","Block Y","Block Z","Registers Per Thread","Static SMem","Dynamic SMem","Size","Throughput","Device","Context","Stream","Name"
+s,ms,,,,,,,,KB,B,MB,GB/s,,,,
+0.201257,166.254747,,,,,,,,,,512.000000,3.007433,"Tesla K40c (0)","1","7","[CUDA memcpy HtoD]"
+0.367616,99.304557,32,32,1,32,32,1,32,0.000000,1.638400e+04,,,"Tesla K40c (0)","1","7","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*) [107]"
+0.466925,161.626651,,,,,,,,,,512.000000,3.093549,"Tesla K40c (0)","1","7","[CUDA memcpy DtoH]"
+4.413408,166.247898,,,,,,,,,,512.000000,3.007557,"Tesla K40c (0)","1","7","[CUDA memcpy HtoD]"
+4.579728,99.413901,32,32,1,32,32,1,32,0.000000,1.638400e+04,,,"Tesla K40c (0)","1","7","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*) [131]"
+4.679146,161.626811,,,,,,,,,,512.000000,3.093546,"Tesla K40c (0)","1","7","[CUDA memcpy DtoH]"
+4.873194,166.137338,,,,,,,,,,512.000000,3.009558,"Tesla K40c (0)","1","7","[CUDA memcpy HtoD]"
+5.039394,99.584943,32,32,1,32,32,1,32,0.000000,1.638400e+04,,,"Tesla K40c (0)","1","7","__kernel___forma_kernel__0__(float*, int, int, int, int, int, int, float*) [155]"
+5.138983,161.628890,,,,,,,,,,512.000000,3.093506,"Tesla K40c (0)","1","7","[CUDA memcpy DtoH]"

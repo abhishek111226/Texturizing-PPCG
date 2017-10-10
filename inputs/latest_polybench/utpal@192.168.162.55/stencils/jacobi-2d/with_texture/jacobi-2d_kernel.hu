@@ -1,0 +1,16 @@
+#include "cuda.h"
+
+
+__global__ void kernel0(int c0);
+
+__global__ void kernel1(int c0);
+
+#ifdef HOSTCODE 
+ 	 surface< void, 2 > surfRef_A;
+	 surface< void, 2 > surfRef_B;
+
+#elif DEVICECODE 
+	 extern surface< void, 2 > surfRef_A;
+	 extern surface< void, 2 > surfRef_B;
+
+ #endif 

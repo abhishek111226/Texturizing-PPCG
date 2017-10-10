@@ -1,0 +1,36 @@
+#include "cuda.h"
+
+
+__global__ void kernel0(float c_F[400][2850], float *o, float s_F[ns <= 0 ? 399 : 400][2850], int ns, int c0);
+
+__global__ void kernel1(float *i, int ns, int c0);
+
+__global__ void kernel2(float *f, int ns, int c0);
+
+__global__ void kernel3(float *g, int ns, int c0);
+
+__global__ void kernel4(float *o, int ns, int c0);
+
+__global__ void kernel5(float U_f[2850][3000], float *f, float inp_F[400][3000], int ns, int c0);
+
+__global__ void kernel6(float U_g[2850][3000], float *g, float inp_F[400][3000], int ns, int c0);
+
+__global__ void kernel7(float U_i[2850][3000], float *i, float inp_F[400][3000], int ns, int c0);
+
+__global__ void kernel8(float W_f[2850][2850], float *f, float s_F[ns <= 0 ? 399 : 400][2850], int ns, int c0);
+
+__global__ void kernel9(float U_o[2850][3000], float inp_F[400][3000], float *o, int ns, int c0);
+
+__global__ void kernel10(float W_i[2850][2850], float *i, float s_F[ns <= 0 ? 399 : 400][2850], int ns, int c0);
+
+__global__ void kernel11(float W_g[2850][2850], float *g, float s_F[ns <= 0 ? 399 : 400][2850], int ns, int c0);
+
+__global__ void kernel12(float W_o[2850][2850], float *o, float s_F[ns <= 0 ? 399 : 400][2850], int ns, int c0);
+
+__global__ void kernel13(float c_F[400][2850], float *f, float *g, float *i, int ns, int c0);
+
+#ifdef HOSTCODE 
+ 
+#elif DEVICECODE 
+
+ #endif 

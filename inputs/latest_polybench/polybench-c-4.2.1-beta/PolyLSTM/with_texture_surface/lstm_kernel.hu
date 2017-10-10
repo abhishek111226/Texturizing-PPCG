@@ -1,0 +1,56 @@
+#include "cuda.h"
+
+
+__global__ void kernel0(float c_F[400][2850], float *o, int ns, int c0);
+
+__global__ void kernel1(float *i, int ns, int c0);
+
+__global__ void kernel2(float *f, int ns, int c0);
+
+__global__ void kernel3(float *g, int ns, int c0);
+
+__global__ void kernel4(float *o, int ns, int c0);
+
+__global__ void kernel5(float *f, int ns, int c0);
+
+__global__ void kernel6(float *g, int ns, int c0);
+
+__global__ void kernel7(float *i, int ns, int c0);
+
+__global__ void kernel8(float *f, int ns, int c0);
+
+__global__ void kernel9(float *o, int ns, int c0);
+
+__global__ void kernel10(float *i, int ns, int c0);
+
+__global__ void kernel11(float *g, int ns, int c0);
+
+__global__ void kernel12(float *o, int ns, int c0);
+
+__global__ void kernel13(float c_F[400][2850], float *f, float *g, float *i, int ns, int c0);
+
+#ifdef HOSTCODE 
+ 	 texture< float, 2, cudaReadModeElementType > texRef_U_f;
+	 texture< float, 2, cudaReadModeElementType > texRef_U_g;
+	 texture< float, 2, cudaReadModeElementType > texRef_U_i;
+	 texture< float, 2, cudaReadModeElementType > texRef_U_o;
+	 texture< float, 2, cudaReadModeElementType > texRef_W_f;
+	 texture< float, 2, cudaReadModeElementType > texRef_W_g;
+	 texture< float, 2, cudaReadModeElementType > texRef_W_i;
+	 texture< float, 2, cudaReadModeElementType > texRef_W_o;
+	 texture< float, 2, cudaReadModeElementType > texRef_inp_F;
+	 surface< void, 2 > surfRef_s_F;
+
+#elif DEVICECODE 
+	 extern texture< float, 2, cudaReadModeElementType > texRef_U_f;
+	 extern texture< float, 2, cudaReadModeElementType > texRef_U_g;
+	 extern texture< float, 2, cudaReadModeElementType > texRef_U_i;
+	 extern texture< float, 2, cudaReadModeElementType > texRef_U_o;
+	 extern texture< float, 2, cudaReadModeElementType > texRef_W_f;
+	 extern texture< float, 2, cudaReadModeElementType > texRef_W_g;
+	 extern texture< float, 2, cudaReadModeElementType > texRef_W_i;
+	 extern texture< float, 2, cudaReadModeElementType > texRef_W_o;
+	 extern texture< float, 2, cudaReadModeElementType > texRef_inp_F;
+	 extern surface< void, 2 > surfRef_s_F;
+
+ #endif 

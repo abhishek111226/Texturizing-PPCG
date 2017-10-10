@@ -1,0 +1,24 @@
+#include "cuda.h"
+
+
+__global__ void kernel0(float R[1200][1200]);
+
+__global__ void kernel1(float *nrm, int c0);
+
+__global__ void kernel2(float A[1000][1200], float R[1200][1200], int c0);
+
+__global__ void kernel3(float A[1000][1200], float *nrm, int c0);
+
+__global__ void kernel4(float A[1000][1200], float R[1200][1200], int c0);
+
+__global__ void kernel5(float A[1000][1200], float R[1200][1200], int c0);
+
+__global__ void kernel6(float R[1200][1200], float *nrm, int c0);
+
+#ifdef HOSTCODE 
+ 	 surface< void, 2 > surfRef_Q;
+
+#elif DEVICECODE 
+	 extern surface< void, 2 > surfRef_Q;
+
+ #endif 
