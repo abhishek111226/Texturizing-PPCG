@@ -11,7 +11,7 @@
 
 ### Developed at IIT Hyderabad, India ###
 
-### An initial version of this work was receipt of Best poster award at IEEE HiPC 2016, Hyderabad, India
+### An initial stage of this work received Best poster award at IEEE HiPC, 2016, Hyderabad, India
 ### https://www.researchgate.net/publication/333929391_Texturizing_PPCG_Supporting_Texture_Memory_in_a_Polyhedral_Compiler
 
 
